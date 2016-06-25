@@ -5,7 +5,7 @@
         String password = request.getParameter("password");
         Class.forName("org.postgresql.Driver");  // PostgreSQL database connection
         Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/DrivingCourse" ,"postgres","Sade01pass");    
-        PreparedStatement pst = conn.prepareStatement("Select \"user,pass\" from \"DrivingCourse\".\"User\" where \"user\"=? and \"pass\"=?");
+        PreparedStatement pst = conn.prepareStatement("Select \"username\",\"password\" from \"DrivingCourse\".\"User\" where \"username\"=? and \"password\"=?");
         pst.setString(1, username);
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();                        
