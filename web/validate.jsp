@@ -1,7 +1,10 @@
-<%@page import="javax.swing.JOptionPane"%>
 <%@ page import ="java.sql.*" %>
 <%
     try {
+        if (request.getParameter("id") == "2") {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("signUp.jsp");
+            dispatcher.forward(request, response);
+        }
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         Class.forName("org.postgresql.Driver");  // PostgreSQL database connection

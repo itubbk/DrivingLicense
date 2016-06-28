@@ -33,5 +33,17 @@
                 </table>
             </center>
         </form>
+        <form method="post" action="signUp.jsp">
+            <center>
+                <table border="1" cellpadding="5" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" align="right"><input type="submit" value="Sign Up" />
+                            </td>                        
+                        </tr>                    
+                    </tbody>
+                </table>
+            </center>
+        </form>
     </body>
 </html>
