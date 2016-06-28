@@ -1,3 +1,4 @@
+<%@page import="javax.swing.JOptionPane"%>
 <%@ page import ="java.sql.*" %>
 <%
     try {
@@ -12,7 +13,17 @@
         if (rs.next()) {
             out.println("Valid login credentials");
         } else {
-            out.println("Invalid login credentials");
+            pst = conn.prepareStatement("Select \"username\" from \"DrivingCourse\".\"User\" where \"username\"=?");
+            pst.setString(1, username);
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("indexWrongPassword.jsp");
+                dispatcher.forward(request, response);
+            } else {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("indexWrongUsername.jsp");
+                dispatcher.forward(request, response);
+            }
+
         }
     } catch (Exception e) {
         out.println("Something went wrong !! Please try again");
