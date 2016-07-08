@@ -166,6 +166,47 @@ body {
     -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
 }
+
+.createCustomer {
+    position: relative;
+    margin: 40px;
+    padding: 20px 20px 20px;
+    width: inherit;
+    background: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.createCustomer h1 {
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+    -webkit-box-shadow: 0 1px whitesmoke;
+    box-shadow: 0 1px whitesmoke;
+}
+.createCustomer:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
 .login:before {
     content: '';
     position: absolute;
@@ -238,7 +279,7 @@ input {
     font-size: 14px;
 }
 
-input[type=text], input[type=password] {
+input[type=text1], input[type=password] {
     margin: 5px;
     padding: 0 10px;
     width: 200px;
@@ -253,7 +294,7 @@ input[type=text], input[type=password] {
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
 }
-input[type=text]:focus, input[type=password]:focus {
+input[type=text1]:focus, input[type=password]:focus {
     border-color: #7dc9e2;
     outline-color: #dceefc;
     outline-offset: 0;
