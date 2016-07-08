@@ -10,7 +10,8 @@
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();
         if (rs.next()) {
-            out.println("Valid login credentials");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("../homePage.html");
+            dispatcher.forward(request, response);
         } else {
             pst = conn.prepareStatement("Select \"username\" from \"DrivingCourse\".\"User\" where \"username\"=?");
             pst.setString(1, username);
