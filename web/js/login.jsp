@@ -16,10 +16,10 @@
             pst.setString(1, username);
             rs = pst.executeQuery();
             if (rs.next()) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("indexWrongPassword.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("../loginWrongPassPage.html");
                 dispatcher.forward(request, response);
             } else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("indexWrongUsername.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("../loginWrongUsernamePage.html");
                 dispatcher.forward(request, response);
             }
 

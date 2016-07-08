@@ -15,7 +15,7 @@
             if (username.equals(rs.getString("user"))) {
                 isvalid=0;
                 JOptionPane.showMessageDialog(null, "username is found in our system!");
-                RequestDispatcher dispatcher = request.getRequestDispatcher("signUp.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("signUp.html");
                 dispatcher.forward(request, response);
             }
         }
@@ -29,7 +29,7 @@
         Statement statement = conn.createStatement();
         statement.executeUpdate("Insert into \"DrivingCourse\".\"User\" values (" + max + ",'" + username + "','" + password + "')");
         JOptionPane.showMessageDialog(null, "user is signed up");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index.html");
         dispatcher.forward(request, response);
         }
     } 
