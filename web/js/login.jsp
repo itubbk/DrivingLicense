@@ -10,7 +10,7 @@
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();
         if (rs.next()) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("../homePage.html");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("../homePage.jsp");
             dispatcher.forward(request, response);
         } else {
             pst = conn.prepareStatement("Select \"username\" from \"DrivingCourse\".\"User\" where \"username\"=?");
