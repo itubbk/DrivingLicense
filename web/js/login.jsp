@@ -18,7 +18,7 @@
             rs = pst.executeQuery();
             if (rs.next()) {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("../loginWrongPassPage.html");
-                dispatcher.forward(request, response);
+               dispatcher.forward(request, response);
             } else {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("../loginWrongUsernamePage.html");
                 dispatcher.forward(request, response);

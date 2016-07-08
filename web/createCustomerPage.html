@@ -1,38 +1,38 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Customer</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-    <form action="homePage.jsp" method="post">
+    <form action="js/createCustomer.jsp" method="post">
         <div class="createCustomer">
-        <h1>Customer Information</h1>
+            <h1>Customer Information</h1>
 
-        <fieldset>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name">
-            
-            <label for="name">Surname:</label>
-            <input type="text" id="name" name="user_surname"><br>
+            <fieldset>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
 
-            <label for="mail">Phone Number:</label>
-            <input type="text" id="mail" name="user_phoneNumber"><br>
-            
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="user_email"><br>
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="user_surname"><br>
 
-            <label>Gender:</label>
-            <input type="radio" id="Man" value="Man" name="Man"><label for="Man" class="light">Man</label>
-            <input type="radio" id="Woman" value="Woman" name="Woman"><label for="Woman" class="light">Woman</label>
-        </fieldset>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" name="user_phoneNumber"><br>
 
-        <fieldset>
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="user_address">
-        </fieldset>
-        <button type="submit">Create</button>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email"><br>
+
+                <label>Gender:</label>
+                <input type="radio" id="Man" value="Man" name="user_gender"><label for="Man" class="light">Man</label>
+                <input type="radio" id="Woman" value="Woman" name="user_gender"><label for="Woman" class="light">Woman</label>
+                <br>
+                <label>Driving License Date</label>
+                <input type="date" name="user_date"><br>
+            </fieldset>
+            <fieldset>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="user_address">
+            </fieldset>
+            <button type="submit">Create</button>
         </div>
     </form>
 
